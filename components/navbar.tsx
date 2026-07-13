@@ -11,10 +11,12 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Work", href: "#work" },
-  { name: "Reviews", href: "#reviews" },
-  { name: "Contact", href: "#contact" },
+   { name: "Home", href: "#" },
+  { name: "Über uns", href: "#about" },
+  { name: "Events", href: "#events" },
+  { name: "Galerie", href: "#gallery" },
+  { name: "Sponsoren", href: "#sponsors" },
+  { name: "Kontakt", href: "#kontakt" },
 ];
 
 export function Navbar({ dark, setDark }: NavbarProps) {
