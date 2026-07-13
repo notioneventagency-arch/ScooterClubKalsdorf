@@ -33,12 +33,12 @@ export function Navbar({ dark, setDark }: NavbarProps) {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <img
-            src="ne2.png"
-            alt="Notion Agency"
+            src="/logo/logo.png"
+            alt="Scooter Club Kalsdorf"
             className="h-8 w-auto object-contain"
             />
       
-          <span className="text-lg font-bold tracking-tight">NOTION AGENCY</span>
+          <span className="text-lg font-bold tracking-tight">SCOOTER CLUB KALSDORFY</span>
         </a>
 
         {/* Desktop Navigation */}
