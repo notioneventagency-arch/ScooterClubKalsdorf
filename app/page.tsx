@@ -2,51 +2,115 @@ export default function Home() {
   return (
     <main className="bg-zinc-950 text-white">
 
-      {/* HERO */}
-      <section
-        className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/hero.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative z-10 px-6">
-
-          <img
-            src="/logo/logo.png"
-            alt="Scooter Club Kalsdorf"
-            className="mx-auto w-52 md:w-72 mb-8"
-          />
-
-          <h1 className="text-5xl md:text-8xl font-black uppercase">
-            Scooter Club Kalsdorf
-          </h1>
-
-          <p className="text-xl md:text-2xl mt-6 text-zinc-300">
-            Vespa • Gemeinschaft • Leidenschaft • Ausfahrten
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-5 mt-12">
-
-            <a
-              href="#events"
-              className="bg-red-600 hover:bg-red-700 transition px-8 py-4 rounded-xl font-bold"
-            >
-              Unsere Events
-            </a>
-
-            <a
-              href="#kontakt"
-              className="border border-white hover:bg-white hover:text-black transition px-8 py-4 rounded-xl font-bold"
-            >
-              Kontakt
-            </a>
-
-          </div>
-
-        </div>
-      </section>
+    {/* HERO */}
+2
+ 
+3
+<section
+4
+className="relative min-h-screen flex items-center justify-center overflow-hidden"
+5
+style={{
+6
+backgroundImage: "url('/images/hero.jpg')",
+7
+backgroundSize: "cover",
+8
+backgroundPosition: "center",
+9
+}}
+10
+>
+11
+<div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-zinc-950" />
+12
+ 
+13
+<div className="relative z-10 text-center px-6 max-w-6xl">
+14
+ 
+15
+<img
+16
+src="/logo/logo.png"
+17
+alt="Scooter Club Kalsdorf"
+18
+className="mx-auto w-40 md:w-64 mb-10 drop-shadow-2xl"
+19
+/>
+20
+ 
+21
+<p className="uppercase tracking-[0.4em] text-yellow-500 mb-4 font-semibold">
+22
+Vespa Club Austria>
+23
+Kalsdorf
+24
+</h1>
+25
+ 
+26
+<p className="mt-8 text-xl md:text-3xl text-zinc-300 max-w-3xl mx-auto">
+27
+Gemeinsam unterwegs. Legendäre Ausfahrten.
+28
+Italienischer Lifestyle auf zwei Rädern.
+29
+</p>
+30
+ 
+31
+<div className="flex flex-wrap justify-center gap-6 mt-12">
+32
+ 
+33
+<a
+34
+href="#events"
+35
+className="bg-yellow-500 text-black px-10 py-5 rounded-full font-bold hover:scale-105 duration-ounded-full hover:bgp-10 mt-24 max-w-3xl mx-auto">
+36
+ 
+37
+<div>
+38
+<h3 className="text-4xl font-black text-yellow-500">50+</h3>
+39
+<p className="text-zinc-400">Mitglieder</p>
+40
+</div>
+41
+ 
+42
+<div>
+43
+<h3 className="text-4xl font-black text-yellow-500">100+</h3>
+44
+<p className="text-zinc-400">Ausfahrten</p>
+45
+</div>
+46
+ 
+47
+<div>
+48
+<h3 className="text-4xl font-black text-yellow-500">10+</h3>
+49
+<p className="text-zinc-400">Jahre Leidenschaft</p>
+50
+</div>
+51
+ 
+52
+</div>
+53
+ 
+54
+</div>
+55
+</section>
 
       {/* ÜBER UNS */}
 
