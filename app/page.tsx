@@ -4,630 +4,564 @@ return (
 3
 <main className="bg-zinc-950 text-white">
 4
- 
-5
 {/* NAVBAR */}
+5
+ 
 6
- 
+<nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-lg border-b border-white/10">
 7
-<nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40 border-b border-white/10">
-8
 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-9
- 
-10
+8
 <div className="flex items-center gap-3">
-11
+9
 <img
-12
+10
 src="/logo/logo.png"
+11
+alt Scooter Club Kalsdorf
+12
+</span>
 13
-alt="Scooter Club Kalsdorf"
+</div>
 14
-className="w-10 h-10"
+ 
 15
-</div>
+<div className="hidden md:flex gap-8">
 16
- 
+#aboutÜber Uns</a>
 17
-<div className="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+#events>
 18
-#about
+#gallery
 19
-Über Uns
-20
-</a>
-21
-#events:text-yellow-500">
-22
-Events
-23
-</a>
-24
-<a href="#gallery Galerie
-25
-</a>
-26
 #kontakt
-27
+20
 </div>
-28
- 
-29
+21
 </div>
-30
+22
 </nav>
-31
+23
  
-32
+24
 {/* HERO */}
-33
+25
  
-34
+26
 <section
-35
+27
 className="relative min-h-screen flex items-center justify-center"
-36
+28
 style={{
-37
+29
 backgroundImage: "url('/images/hero.jpg')",
-38
+30
 backgroundSize: "cover",
-39
+31
 backgroundPosition: "center",
-40
+32
 }}
-41
+33
 >
+34
+<div className="absolute inset-0 bg-black/70" />
+35
+ 
+36
+<div className="relative z-10 text-center px-6 max-w-5xl">
+37
+/logo/logo.pngmx-auto w-40 mb-8"
+38
+/>
+39
+ 
+40
+<p className="uppercase tracking-[0.3em] text-yellow-500">
+41
+Vespa Lifestyle · Gemeinschaft · Freiheit
 42
-<div className="absolute inset-0 bg-black/75" />
+</p>
 43
  
 44
-<div className="relative z-10 px-6 text-center max-w-6xl">
+<h1 className="text-6xl md:text-8xl font-black mt-8">
 45
- 
-46
-/logo/logo.png
-47
- 
-48
-<p className="uppercase tracking-[0.4em] text-yellow-500 mb-6">
-49
-Vespa Lifestyle • Gemeinschaft • Freiheit
-50
-</p>
-51
- 
-52
-<h1 className="text-6xl md:text-8xl font-black leading-none">
-53
 SCOOTER CLUB
-54
+46
 <br />
-55
+47
 KALSDORF
-56
+48
 </h1>
-57
+49
  
-58
-<p className="mt-8 text-xl md:text-3xl text-zinc-300 max-w-4xl mx-auto">
-59
+50
+<p className="mt-8 text-xl text-zinc-300">
+51
 Leidenschaft für klassische Vespas,
-60
+52
 unvergessliche Touren und echte Freundschaften.
-61
+53
 </p>
-62
+54
  
-63
-<div className="flex flex-wrap justify-center gap-5 mt-12">
-64
- 
-65
-#events
-66
- 
-67
-#gallery
-68
-Galerie ansehen
-69
+55
+<div className="flex justify-center gap-4 mt-10 flex-wrap">
+56
+<a
+57
+href="#chste Ausfahrt
+58
 </a>
+59
+ 
+60
+#gallery="border border-white px-8 py-4 rounded-2xl"
+61
+>
+62
+Galerie
+63
+</a>
+64
+</div>
+65
+ 
+66
+<div className="grid grid-cols-3 gap-8 mt-20">
+67
+<div>
+68
+<h3 className="text-4xl font-black text-yellow-500">
+69
+50+
 70
- 
+</h3>
 71
-</div>
+<p>Mitglieder</p>
 72
- 
+</div>
 73
-<div className="grid grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto">
+ 
 74
- 
+<div>
 75
-<div>
+<h3 className="text-4xl font-black text-yellow-500">
 76
-<h3 className="text-4xl font-black text-yellow-500">50+</h3>
+100+
 77
-<p className="text-zinc-400">Mitglieder</p>
+</h3>
 78
-</div>
+<p>Touren</p>
 79
- 
-80
-<div>
-81
-<h3 className="text-4xl font-black text-yellow-500">100+</h3>
-82
-<p className="text-zinc-400">Touren</p>
-83
 </div>
-84
+80
  
-85
+81
 <div>
+82
+<h3 className="text-4xl font-black text-yellow-500">
+83
+10+
+84
+</h3>
+85
+<p>Jahre Leidenschaft</p>
 86
-<h3 className="text-4xl font-black text-yellow-500">10+</h3>
+</div>
 87
-<p className="text-zinc-400">Jahre Leidenschaft</p>
+</div>
 88
 </div>
 89
- 
-90
-</div>
-91
- 
-92
-</div>
-93
 </section>
-94
+90
  
-95
+91
 {/* ÜBER UNS */}
-96
+92
  
-97
+93
 <section
-98
+94
 id="about"
-99
+95
 className="max-w-7xl mx-auto py-28 px-6"
-100
+96
 >
-101
+97
 <div className="grid md:grid-cols-2 gap-20 items-center">
+98
+<div>
+99
+<p className="text-yellow-500 uppercase mb-4">
+100
+Über Uns
+101
+</p>
 102
  
 103
-<div>
-104
- 
-105
-<p className="text-yellow-500 uppercase tracking-widest mb-4">
-106
-Über Uns
-107
-</p>
-108
- 
-109
 <h2 className="text-5xl font-black mb-6">
-110
+104
 Mehr als nur ein Rollerclub
-111
+105
 </h2>
-112
+106
  
+107
+<p className="text-zinc-300 leading-9">
+108
+Der Scooter Club Kalsdorf steht für
+109
+italienischen Lifestyle, Gemeinschaft
+110
+und Leidenschaft für klassische Vespas.
+111
+ 
+112
+Regelmäßig organisieren wir Ausfahrten,
 113
-<p className="text-zinc-300 text-lg leading-9">
+Clubabende und Treffen in der gesamten
 114
-Der Scooter Club Kalsdorf steht für italienischen Lifestyle,
+Steiermark.
 115
-kameradschaftliche Gemeinschaft und die Leidenschaft für
+</p>
 116
-klassische Vespas.
+</div>
 117
  
 118
-Unsere Mitglieder organisieren regelmäßig Ausfahrten,
+/images/about.jpg
 119
-Treffen und gemeinsame Veranstaltungen in der gesamten
+</div>
 120
-Steiermark.
+</section>
 121
  
 122
-Was uns verbindet, ist die Freude am Fahren und die Liebe
-123
-zu zeitlosen Fahrzeugen mit Charakter.
-124
-</p>
-125
- 
-126
-</div>
-127
- 
-128
-<img
-129
-.jpg
-130
- 
-131
-</div>
-132
-</section>
-133
- 
-134
 {/* EVENTS */}
-135
+123
  
-136
+124
 <section
-137
+125
 id="events"
-138
+126
 className="bg-zinc-900 py-28 px-6"
-139
+127
 >
-140
+128
 <div className="max-w-7xl mx-auto">
-141
- 
-142
-<h2 className="text-5xl font-black mb-14">
-143
+129
+<h2 className="text-5xl font-black mb-12">
+130
 Kommende Events
-144
+131
 </h2>
-145
+132
  
-146
+133
 <div className="grid md:grid-cols-3 gap-8">
-147
- 
-148
-<div className="rounded-3xl p-8 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700">
-149
-<h3 className="text-2xl font-bold mb-3">
-150
+134
+<div className="card-premium p-8">
+135
+<h3 className="text-2xl font-bold">
+136
 Saisonstart
-151
+137
 </h3>
-152
-<p className="text-zinc-400">
-153
-Gemeinsamer Start in die neue Saison.
-154
-</p>
-155
-<p className="mt-6 text-yellow-500 font-semibold">
-156
+138
+ 
+139
+<p className="mt-4 text-zinc-400">
+140
 April
-157
+141
 </p>
-158
+142
 </div>
-159
+143
  
-160
-<div className="rounded-3xl p-8 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700">
-161
-<h3 className="text-2xl font-bold mb-3">
-162
+144
+<div className="card-premium p-8">
+145
+<h3 className="text-2xl font-bold">
+146
 Vespa Treffen
-163
+147
 </h3>
-164
-<p className="text-zinc-400">
-165
-Regionales Treffen mit befreundeten Clubs.
-166
-</p>
-167
-<p className="mt-6 text-yellow-500 font-semibold">
-168
-Juni
-169
-</p>
-170
-</div>
-171
+148
  
-172
-<div className="rounded-3xl p-8 bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700">
-173
-<h3 className="text-2xl font-bold mb-3">
-174
-Abschlussfahrt
-175
-</h3>
-176
-<p className="text-zinc-400">
-177
-Gemeinsamer Saisonabschluss.
-178
+149
+<p className="mt-4 text-zinc-400">
+150
+Juni
+151
 </p>
-179
-<p className="mt-6 text-yellow-500 font-semibold">
-180
-Oktober
-181
-</p>
-182
+152
 </div>
+153
+ 
+154
+<div className="card-premium p-8">
+155
+<h3 className="text-2xl font-bold">
+156
+Abschlussfahrt
+157
+</h3>
+158
+ 
+159
+<p className="mt-4 text-zinc-400">
+160
+Oktober
+161
+</p>
+162
+</div>
+163
+</div>
+164
+</div>
+165
+</section>
+166
+ 
+167
+{/* GALERIE */}
+168
+ 
+169
+<section
+170
+id="gallery"
+171
+className="max-w-7xl mx-auto py-28 px-6"
+172
+>
+173
+<h2 className="text-5xl font-black mb-12">
+174
+Galerie
+175
+</h2>
+176
+ 
+177
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+178
+/gallery/1.jpg
+179
+ 
+180
+/gallery/2.jpg alt=""
+181
+className="rounded-3xl hover:scale-105 duration-300"
+182
+/>
 183
  
 184
-</div>
+/3.jpg"
 185
- 
+alt=""
 186
-</div>
+className="rounded-3xl hover:scale-105 duration-300"
 187
-</section>
+/>
 188
  
 189
-{/* GALERIE */}
+/gallery/4.jpg
 190
- 
+</div>
 191
-<section
+</section>
 192
-id="gallery"
-193
-className="max-w-7xl mx-auto py-28 px-6"
-194
->
-195
-<h2 className="text-5xl font-black mb-14">
-196
-Unsere Ausfahrten
-197
-</h2>
-198
  
+193
+{/* INSTAGRAM */}
+194
+ 
+195
+<section className="bg-zinc-900 py-24 px-6">
+196
+<div className="max-w-5xl mx-auto text-center">
+197
+<h2 className="text-5xl font-black mb-6">
+198
+Instagram
 199
-<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+</h2>
 200
  
 201
-<div className="overflow-hidden rounded-3xl">
-202
-<img
-203
-src="/gallery/1.jpg"
-204
-ssName="overflow-hidden rounded-3xl">
-205
-<img
-206
-src="/gallery/2.jpg"
-207
-className="ow-hidden rounded-3xl">
-208
-<img
-209
-src="/gallery/3.jpg"
-210
-className="hoverdden rounded-3xl">
-211
-<img
-212
-src="/gallery/4.jpg"
-213
-className="hover:scale-110 duration-500"
-214
-/>
-215
-Name="bg-zinc-900 py-24 px-6">
-216
- 
-217
-<div className="max-w-7xl mx-auto text-center">
-218
- 
-219
-<h2 className="text-5xl font-black mb-6">
-220
-Folge uns auf Instagram
-221
-</h2>
-222
- 
-223
 <p className="text-zinc-400 mb-10">
-224
-Die neuesten Bilder und Eindrücke unserer Touren.
-225
+202
+Folge unseren neuesten Ausfahrten.
+203
 </p>
+204
+ 
+205
+<a
+206
+href="https://www.instagram.com/scooter_club_kalsdorf/"
+207
+target="_blank"
+208
+rel="noopener noreferrer"
+209
+className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold"
+210
+>
+211
+Instagram besuchen
+212
+</a>
+213
+</div>
+214
+</section>
+215
+ 
+216
+{/* KONTAKT */}
+217
+ 
+218
+<section
+219
+id="kontakt"
+220
+className="py-28 px-6"
+221
+>
+222
+<div className="max-w-4xl mx-auto">
+223
+<h2 className="text-5xl font-black mb-10">
+224
+Kontakt
+225
+</h2>
 226
  
 227
-www.instagram.com/scooter_club_kalsdorf/"
+<p className="mb-3">
 228
-target="_blank"
+📧 scooter.kalsdorf@gmail.com
 229
-rel="noopener noreferrer"
+</p>
 230
-className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold hover:bg-yellow-400"
+ 
 231
->
+<p className="mb-10">
 232
-Instagram besuchen
+📞 +43 664 1259454
 233
-</a>
+</p>
 234
  
 235
-</div>
+<form className="space-y-5">
 236
- 
+<input
 237
-</section>
+placeholder="Name"
 238
- 
+className="w-full bg-zinc-900 rounded-2xl p-4"
 239
-{/* KONTAKT */}
+/>
 240
  
 241
-<section
+<input
 242
-id="kontakt"
+placeholder="E-Mail"
 243
-className="py-28 px-6"
+className="w-full bg-zinc-900 rounded-2xl p-4"
 244
->
+/>
 245
-<div className="max-w-4xl mx-auto">
+ 
 246
- 
+<textarea
 247
-<h2 className="text-5xl font-black mb-10">
+rows={6}
 248
-Kontakt
+placeholder="Nachricht"
 249
-</h2>
+className="w-full bg-zinc-900 rounded-2xl p-4"
 250
- 
+/>
 251
-<p className="mb-3 text-lg">
+ 
 252
-📧 scooter.kalsdorf@gmail.com
+<button
 253
-</p>
+className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold"
 254
- 
+>
 255
-<p className="mb-12 text-lg">
+Nachricht senden
 256
-📞 +43 664 1259454
+</button>
 257
-</p>
+</form>
 258
- 
+</div>
 259
-<form className="space-y-5">
+</section>
 260
  
 261
-<input
-262
-placeholder="Name"
-263
-className="w-full bg-zinc-900 rounded-2xl p-4"
-264
-/>
-265
- 
-266
-<input
-267
-placeholder="E-Mail"
-268
-className="w-full bg-zinc-900 rounded-2xl p-4"
-269
-/>
-270
- 
-271
-<textarea
-272
-rows={6}
-273
-placeholder="Nachricht"
-274
-className="w-full bg-zinc-900 rounded-2xl p-4"
-275
-/>
-276
- 
-277
-<button
-278
-className="bg-yellow-500 text-black px-8 py-4 rounded-2xl font-bold hover:bg-yellow-400"
-279
->
-280
-Nachricht senden
-281
-</button>
-282
- 
-283
-</form>
-284
- 
-285
-</div>
-286
-</section>
-287
- 
-288
 {/* FOOTER */}
-289
+262
  
-290
-<footer className="border-t border-zinc-800 py-12">
-291
- 
-292
+263
+<footer className="border-t border-zinc-800 py-10">
+264
 <div className="text-center">
-293
- 
-294
+265
 <p className="text-zinc-500">
-295
+266
 © 2026 Scooter Club Kalsdorf
-296
+267
 </p>
-297
+268
  
-298
+269
 <div className="flex justify-center gap-8 mt-6">
-299
- 
-300
-https://www.instagram.com/scooter_club_kalsdorf/
-301
-Instagram
-302
-</a>
-303
- 
-304
+270
 <a
-305
-cebook.com/p/Scooter-Club-Kalsdorf-61553201203901/
-306
-Facebook
-307
+271
+href="https://www.instagram.com/scooter_club_kalsdorf/"
+272
+target="_blank"
+273
+rel="noopener noreferrer"
+274
+>
+275
+Instagram
+276
 </a>
-308
+277
  
-309
+278
+https://www.facebook.com/p/Scooter-Club-Kalsdorf-61553201203901/
+279
 </div>
-310
- 
-311
+280
 </div>
-312
- 
-313
+281
 </footer>
-314
- 
-315
+282
 </main>
-316
-)
-317
+283
+);
+284
 }
