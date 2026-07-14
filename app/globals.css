@@ -1,7 +1,112 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #050505;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(212, 175, 55, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      #0b0f16 50%,
+      #050505 100%
+    );
+
   color: white;
+  overflow-x: hidden;
 }
+
+/* Premium Cards */
+
+.card-premium {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  transition: all 0.3s ease;
+}
+
+.card-premium:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(212, 175, 55, 0.5);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gold Text */
+
+.gold-text {
+  background: linear-gradient(
+    90deg,
+    #fff4c4,
+    #d4af37,
+    #f7e08a
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Button */
+
+.btn-premium {
+  background: linear-gradient(
+    135deg,
+    #f1cf63,
+    #d4af37
+  );
+
+  color: black;
+
+  font-weight: 700;
+
+  border-radius: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+/* Images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 999px;
+}
+`
