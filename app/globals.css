@@ -123,92 +123,490 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Custom scrollbar for dark mode */
-.dark::-webkit-scrollbar {
-  width: 8px;
-}
-.dark::-webkit-scrollbar-track {
-  background: oklch(0.1 0 0);
-}
-.dark::-webkit-scrollbar-thumb {
-  background: oklch(0.3 0 0);
-  border-radius: 4px;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-/* ===========================
-   Scooter Club Kalsdorf Theme
-=========================== */
-
+/* ==============================================
+2
+SCOOTER CLUB KALSDORF PREMIUM THEME
+3
+============================================== */
+4
+ 
+5
 :root {
-  --vespa-red: #c1121f;
-  --vespa-dark: #111111;
-  --vespa-light: #f5f5f5;
-  --vespa-gray: #777777;
+6
+--vespa-gold: #d4af37;
+7
+--vespa-navy: #081421;
+8
+--vespa-cream: #f8f4ea;
+9
+--vespa-green: #7a9480;
+10
+--vespa-dark: #050505;
+11
 }
-
+12
+ 
+13
+/* Smooth Scroll */
+14
+ 
+15
+html {
+16
+scroll-behavior: smooth;
+17
+}
+18
+ 
+19
+/* Background */
+20
+ 
+21
 body {
-  background: linear-gradient(
-    180deg,
-    #050505 0%,
-    #111111 35%,
-    #181818 100%
-  );
+22
+background:
+23
+radial-gradient(
+24
+circle at top,
+25
+rgba(212, 175, 55, 0.08),
+26
+transparent 35%
+27
+),
+28
+linear-gradient(
+29
+180deg,
+30
+#050505 0%,
+31
+#0b0f16 50%,
+32
+#050505 100%
+33
+);
+34
+ 
+35
+min-height: 100vh;
+36
 }
-
-.hero-overlay {
-  background: linear-gradient(
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.55)
-  );
+37
+ 
+38
+/* Scrollbar */
+39
+ 
+40
+::-webkit-scrollbar {
+41
+width: 10px;
+42
 }
-
+43
+ 
+44
+::-webkit-scrollbar-track {
+45
+background: #050505;
+46
+}
+47
+ 
+48
+::-webkit-scrollbar-thumb {
+49
+background: linear-gradient(
+50
+180deg,
+51
+#d4af37,
+52
+#8a6d15
+53
+);
+54
+border-radius: 999px;
+55
+}
+56
+ 
+57
+/* Images */
+58
+ 
+59
+img {
+60
+user-select: none;
+61
+display: block;
+62
+}
+63
+ 
+64
+/* Selection */
+65
+ 
+66
+::selection {
+67
+background: #d4af37;
+68
+color: black;
+69
+}
+70
+ 
+71
+/* Glassmorphism */
+72
+ 
+73
 .glass {
-  background: rgba(255,255,255,.08);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,.15);
+74
+background: rgba(255,255,255,0.05);
+75
+ 
+76
+backdrop-filter: blur(18px);
+77
+ 
+78
+border: 1px solid rgba(255,255,255,0.1);
+79
+ 
+80
+box-shadow:
+81
+0 8px 30px rgba(0,0,0,.25);
+82
 }
-
+83
+ 
+84
+/* Premium Cards */
+85
+ 
+86
+.card-premium {
+87
+background: linear-gradient(
+88
+180deg,
+89
+rgba(255,255,255,.05),
+90
+rgba(255,255,255,.02)
+91
+);
+92
+ 
+93
+border: 1px solid rgba(255,255,255,.08);
+94
+ 
+95
+border-radius: 24px;
+96
+ 
+97
+transition: all .35s ease;
+98
+}
+99
+ 
+100
+.card-premium:hover {
+101
+transform: translateY(-8px);
+102
+ 
+103
+border-color: rgba(212,175,55,.5);
+104
+ 
+105
+box-shadow:
+106
+0 20px 50px rgba(0,0,0,.5);
+107
+}
+108
+ 
+109
+/* Section Headings */
+110
+ 
+111
 .section-title {
-  font-size: clamp(2.2rem,5vw,4rem);
-  font-weight: 800;
-  margin-bottom: 2rem;
+112
+font-size: clamp(2.5rem, 6vw, 5rem);
+113
+ 
+114
+font-weight: 900;
+115
+ 
+116
+line-height: 1;
+117
+ 
+118
+letter-spacing: -0.03em;
+119
 }
-
-.btn-primary {
-  background: var(--vespa-red);
-  color: white;
-  padding: 14px 32px;
-  border-radius: 16px;
-  transition: .3s;
+120
+ 
+121
+/* Gold Text */
+122
+ 
+123
+.gold-text {
+124
+background: linear-gradient(
+125
+90deg,
+126
+#f5d77c,
+127
+#d4af37,
+128
+#fff1b8
+129
+);
+130
+ 
+131
+-webkit-background-clip: text;
+132
+ 
+133
+-webkit-text-fill-color: transparent;
+134
 }
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  background:#990f18;
+135
+ 
+136
+/* Premium Buttons */
+137
+ 
+138
+.btn-gold {
+139
+background: linear-gradient(
+140
+135deg,
+141
+#f0cb57,
+142
+#d4af37
+143
+);
+144
+ 
+145
+color: #111;
+146
+ 
+147
+font-weight: 700;
+148
+ 
+149
+border-radius: 18px;
+150
+ 
+151
+transition: .3s;
+152
 }
-
-.card {
-  background:#181818;
-  border-radius:24px;
-  padding:32px;
-  transition:.35s;
+153
+ 
+154
+.btn-gold:hover {
+155
+transform: translateY(-4px);
+156
+ 
+157
+box-shadow:
+158
+0 12px 35px rgba(212,175,55,.35);
+159
 }
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 45px rgba(0,0,0,.35);
+160
+ 
+161
+.btn-outline {
+162
+border: 1px solid rgba(255,255,255,.25);
+163
+ 
+164
+backdrop-filter: blur(10px);
+165
+ 
+166
+transition: .3s;
+167
 }
-
-img{
-  user-select:none;
+168
+ 
+169
+.btn-outline:hover {
+170
+background: white;
+171
+ 
+172
+color: black;
+173
 }
-
-::selection{
-  background:#c1121f;
-  color:white;
+174
+ 
+175
+/* Hero Animation */
+176
+ 
+177
+@keyframes fadeUp {
+178
+ 
+179
+0% {
+180
+opacity: 0;
+181
+transform:
+182
+translateY(40px);
+183
 }
+184
+ 
+185
+100% {
+186
+opacity: 1;
+187
+transform:
+188
+translateY(0);
+189
+}
+190
+}
+191
+ 
+192
+.fade-up {
+193
+animation:
+194
+fadeUp 1s ease forwards;
+195
+}
+196
+ 
+197
+/* Glow */
+198
+ 
+199
+.glow {
+200
+box-shadow:
+201
+0 0 25px rgba(212,175,55,.25);
+202
+}
+203
+ 
+204
+/* Navbar Blur */
+205
+ 
+206
+.nav-blur {
+207
+backdrop-filter: blur(18px);
+208
+ 
+209
+background:
+210
+rgba(5,5,5,.55);
+211
+ 
+212
+border-bottom:
+213
+1px solid rgba(255,255,255,.08);
+214
+}
+215
+ 
+216
+/* Gallery Hover */
+217
+ 
+218
+.gallery-image {
+219
+overflow: hidden;
+220
+ 
+221
+border-radius: 24px;
+222
+}
+223
+ 
+224
+.gallery-image img {
+225
+transition:
+226
+transform .5s ease;
+227
+}
+228
+ 
+229
+.gallery-image:hover img {
+230
+transform:
+231
+scale(1.08);
+232
+}
+233
+ 
+234
+/* Footer */
+235
+ 
+236
+.footer-gradient {
+237
+background:
+238
+linear-gradient(
+239
+180deg,
+240
+transparent,
+241
+rgba(212,175,55,.05)
+242
+);
+243
+}
+244
+``
