@@ -8,7 +8,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8">
           #aboutÜber Uns</a>
-          #events
+          #eventsEvents</a>
           #gallery
           #kontakt
         </div>
