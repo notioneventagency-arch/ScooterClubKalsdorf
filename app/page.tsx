@@ -31,15 +31,15 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-zinc-800">
+            <div className="card-premium p-6 rounded-2xl">
               Saisonstart
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-800">
+            <div className="card-premium p-6 rounded-2xl">
               Vespa Treffen
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-800">
+            <div className="card-premium p-6 rounded-2xl">
               Abschlussfahrt
             </div>
           </div>
