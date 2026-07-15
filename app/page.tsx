@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -9,51 +10,7 @@ export default function Home() {
 
       <Hero />
 
-      {/* ================= ABOUT ================= */}
-
-      <section
-        id="about"
-        className="max-w-7xl mx-auto px-6 py-28"
-      >
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-          <div>
-
-            <span className="text-red-500 font-semibold uppercase tracking-[0.3em]">
-              Scooter Club Kalsdorf
-            </span>
-
-            <h2 className="text-5xl md:text-6xl font-black mt-4 mb-8">
-              Gemeinsam unterwegs.
-            </h2>
-
-            <p className="text-zinc-300 leading-9 text-lg">
-              Der Scooter Club Kalsdorf verbindet Menschen,
-              die ihre Leidenschaft für Vespa, italienische
-              Roller und gemeinsame Touren teilen.
-
-              <br />
-              <br />
-
-              Ob gemütliche Ausfahrten, Vespa Treffen oder
-              gemeinsame Stammtische – bei uns steht die
-              Gemeinschaft an erster Stelle.
-            </p>
-
-          </div>
-
-          <div>
-
-            <img
-              src="/images/about.jpg"
-              alt="Scooter Club"
-              className="rounded-3xl shadow-2xl"
-            />
-
-          </div>
-
-        </div>
-      </section>
+      <About />
 
       {/* ================= EVENTS ================= */}
 
@@ -61,41 +18,40 @@ export default function Home() {
         id="events"
         className="bg-zinc-900 py-28"
       >
-
         <div className="max-w-7xl mx-auto px-6">
 
-          <h2 className="text-5xl font-black text-center mb-16">
+          <h2 className="section-title text-center">
             Nächste Events
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-            <div className="card-premium p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="card-premium p-8">
+              <h3 className="text-2xl font-bold">
                 Saisonstart
               </h3>
 
-              <p className="text-zinc-400">
+              <p className="mt-4 text-zinc-400">
                 April 2026
               </p>
             </div>
 
-            <div className="card-premium p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="card-premium p-8">
+              <h3 className="text-2xl font-bold">
                 Vespa Treffen
               </h3>
 
-              <p className="text-zinc-400">
+              <p className="mt-4 text-zinc-400">
                 Juni 2026
               </p>
             </div>
 
-            <div className="card-premium p-8 rounded-3xl">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="card-premium p-8">
+              <h3 className="text-2xl font-bold">
                 Abschlussfahrt
               </h3>
 
-              <p className="text-zinc-400">
+              <p className="mt-4 text-zinc-400">
                 Oktober 2026
               </p>
             </div>
@@ -103,41 +59,29 @@ export default function Home() {
           </div>
 
         </div>
-
       </section>
 
       {/* ================= GALERIE ================= */}
 
       <section
         id="gallery"
-        className="max-w-7xl mx-auto py-28 px-6"
+        className="max-w-7xl mx-auto py-32 px-6"
       >
 
-        <h2 className="text-5xl font-black text-center mb-16">
+        <h2 className="section-title text-center">
           Galerie
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-16">
 
-          <img
-            src="/gallery/1.jpg"
-            className="rounded-3xl hover:scale-105 duration-300"
-          />
-
-          <img
-            src="/gallery/2.jpg"
-            className="rounded-3xl hover:scale-105 duration-300"
-          />
-
-          <img
-            src="/gallery/3.jpg"
-            className="rounded-3xl hover:scale-105 duration-300"
-          />
-
-          <img
-            src="/gallery/4.jpg"
-            className="rounded-3xl hover:scale-105 duration-300"
-          />
+          {Array.from({ length: 20 }).map((_, index) => (
+            <img
+              key={index}
+              src={`/gallery/${index + 1}.jpg`}
+              alt={`Scooter Club ${index + 1}`}
+              className="rounded-3xl zoom aspect-square object-cover"
+            />
+          ))}
 
         </div>
 
@@ -152,16 +96,16 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto text-center">
 
-          <h2 className="text-5xl font-black mb-8">
+          <h2 className="section-title">
             Kontakt
           </h2>
 
-          <p className="text-xl">
+          <p className="text-xl mt-8">
             📧 scooter.kalsdorf@gmail.com
           </p>
 
-          <p className="text-xl mt-4">
-            📞 +43 664 1259454
+          <p className="text-xl mt-3">
+            📞 0664 1259454
           </p>
 
         </div>
