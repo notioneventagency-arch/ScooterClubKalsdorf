@@ -48,7 +48,7 @@ export default function Navbar() {
             className="flex items-center gap-4 group"
           >
             <img
-              src="/logo/logo.png"
+              src="/public/logo/logo.png"
               alt="Scooter Club Kalsdorf"
               className="h-14 transition duration-500 group-hover:rotate-6 group-hover:scale-110"
             />
