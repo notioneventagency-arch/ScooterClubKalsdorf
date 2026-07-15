@@ -82,10 +82,10 @@ return (
 
       {/* Text */}
 
-    <div className="mt-8 flex flex-col lg:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
+  <div className="mt-8 flex flex-col lg:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
 
   <img
-    src="/logo/logo2.png"
+    src="/images/IMG_1812.jpg"
     alt="Scooter Club Team"
     className="w-72 md:w-96 rounded-3xl border border-white/10 shadow-2xl"
   />
