@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Events from "@/components/Events";
 
 export default function Home() {
   return (
@@ -12,54 +13,7 @@ export default function Home() {
 
       <About />
 
-      {/* ================= EVENTS ================= */}
-
-      <section
-        id="events"
-        className="bg-zinc-900 py-28"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="section-title text-center">
-            Nächste Events
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-
-            <div className="card-premium p-8">
-              <h3 className="text-2xl font-bold">
-                Saisonstart
-              </h3>
-
-              <p className="mt-4 text-zinc-400">
-                April 2026
-              </p>
-            </div>
-
-            <div className="card-premium p-8">
-              <h3 className="text-2xl font-bold">
-                Vespa Treffen
-              </h3>
-
-              <p className="mt-4 text-zinc-400">
-                Juni 2026
-              </p>
-            </div>
-
-            <div className="card-premium p-8">
-              <h3 className="text-2xl font-bold">
-                Abschlussfahrt
-              </h3>
-
-              <p className="mt-4 text-zinc-400">
-                Oktober 2026
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+ <Events />
 
       {/* ================= GALERIE ================= */}
 
