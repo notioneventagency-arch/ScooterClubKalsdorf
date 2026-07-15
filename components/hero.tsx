@@ -19,7 +19,7 @@ return (
       preload="auto"
       className="absolute inset-0 w-full h-full object-cover"
     >
-      <source src="publi/video/hero.mp4" type="video/mp4" />
+      <source src="/video/hero.mp4" type="video/mp4" />
     </video>
 
   </div>
@@ -57,11 +57,11 @@ return (
       >
         <div className="absolute left-1/2 top-1/2 h-40 w-40 md:h-56 md:w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/20 blur-3xl" />
 
-        <img
-          src="/public/logo/logo.png"
-          alt="Scooter Club Kalsdorf"
-          className="relative mx-auto mb-6 md:mb-10 w-32 sm:w-40 md:w-72 drop-shadow-[0_20px_60px_rgba(0,0,0,.6)]"
-        />
+       <img
+  src="/logo/logo2.png"
+  alt="Scooter Club Kalsdorf"
+  className="relative mx-auto mb-6 md:mb-10 w-32 sm:w-40 md:w-72 drop-shadow-[0_20px_60px_rgba(0,0,0,.6)]"
+/>
       </motion.div>
 
       {/* Überschrift */}
