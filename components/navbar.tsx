@@ -6,147 +6,160 @@ import {
   Facebook,
   Menu,
   X,
-  Phone,
+  MessageCircle,
+  ChevronRight,
 } from "lucide-react";
+
+const links = [
+  { name: "Über Uns", href: "#about" },
+  { name: "Events", href: "#events" },
+  { name: "Galerie", href: "#gallery" },
+  { name: "Kontakt", href: "#kontakt" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll);
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-black/80 backdrop-blur-2xl border-b border-white/10 shadow-2xl"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+    <header className="fixed top-0 left-0 w-full z-50 px-4 pt-4">
 
-        {/* Logo */}
+      <div
+        className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${
+          scrolled
+            ? "bg-black/70 backdrop-blur-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,.45)]"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="flex items-center justify-between px-8 py-4">
 
-        <a href="#" className="flex items-center gap-4">
+          {/* Logo */}
 
-          <img
-            src="/logo/logo.png"
-            alt="Scooter Club Kalsdorf"
-            className="h-14"
-          />
+          <a
+            href="#"
+            className="flex items-center gap-4 group"
+          >
+            <img
+              src="/logo/logo.png"
+              alt="Scooter Club Kalsdorf"
+              className="h-14 transition duration-500 group-hover:rotate-6 group-hover:scale-110"
+            />
 
-          <div>
+            <div>
 
-            <h1 className="font-black uppercase tracking-widest text-lg">
-              Scooter Club
-            </h1>
+              <h1 className="font-black uppercase tracking-[0.25em] leading-none">
+                Scooter Club
+              </h1>
 
-            <p className="text-sm text-zinc-400">
-              Kalsdorf
-            </p>
+              <p className="text-sm text-zinc-400 mt-1">
+                Kalsdorf
+              </p>
+
+            </div>
+
+          </a>
+
+          {/* Desktop */}
+
+          <nav className="hidden lg:flex items-center gap-10">
+
+            {links.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="relative font-medium text-zinc-200 transition duration-300 hover:text-red-500 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all hover:after:w-full"
+              >
+                {item.name}
+              </a>
+            ))}
+
+          </nav>
+
+          {/* Desktop Right */}
+
+          <div className="hidden lg:flex items-center gap-5">
+
+            <a
+              href="https://www.instagram.com/scooter_club_kalsdorf/"
+              target="_blank"
+              className="hover:text-pink-500 transition hover:scale-110"
+            >
+              <Instagram size={22} />
+            </a>
+
+            <a
+              href="https://www.facebook.com/p/Scooter-Club-Kalsdorf-61553201203901/"
+              target="_blank"
+              className="hover:text-blue-500 transition hover:scale-110"
+            >
+              <Facebook size={22} />
+            </a>
+
+            <a
+              href="https://wa.me/436641259454"
+              target="_blank"
+              className="hover:text-green-500 transition hover:scale-110"
+            >
+              <MessageCircle size={22} />
+            </a>
+
+            <a
+              href="#mitglied"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-700 px-7 py-3 font-bold shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105 hover:shadow-red-600/50"
+            >
+              Become a Member
+
+              <ChevronRight
+                size={18}
+                className="transition group-hover:translate-x-1"
+              />
+            </a>
 
           </div>
 
-        </a>
+          {/* Mobile */}
 
-        {/* Desktop */}
-
-        <nav className="hidden lg:flex items-center gap-8">
-
-          <a href="#about" className="hover:text-red-500 transition">
-            Über Uns
-          </a>
-
-          <a href="#events" className="hover:text-red-500 transition">
-            Events
-          </a>
-
-          <a href="#gallery" className="hover:text-red-500 transition">
-            Galerie
-          </a>
-
-          <a href="#kontakt" className="hover:text-red-500 transition">
-            Kontakt
-          </a>
-
-        </nav>
-
-        {/* Rechte Seite */}
-
-        <div className="hidden lg:flex items-center gap-5">
-
-          <a
-            href="https://www.instagram.com/scooter_club_kalsdorf/"
-            target="_blank"
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden"
           >
-            <Instagram className="hover:text-pink-500 transition" />
-          </a>
-
-          <a
-            href="https://www.facebook.com/p/Scooter-Club-Kalsdorf-61553201203901/"
-            target="_blank"
-          >
-            <Facebook className="hover:text-blue-500 transition" />
-          </a>
-
-          <a href="tel:+436641259454">
-            <Phone className="hover:text-green-500 transition" />
-          </a>
-
-          <a
-            href="#mitglied"
-            className="rounded-full bg-red-600 hover:bg-red-700 transition px-6 py-3 font-bold"
-          >
-            Become a Member
-          </a>
+            {open ? <X size={30} /> : <Menu size={30} />}
+          </button>
 
         </div>
-
-        {/* Mobile Button */}
-
-        <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden"
-        >
-          {open ? <X size={30} /> : <Menu size={30} />}
-        </button>
-
       </div>
 
-      {/* Mobile Menü */}
+      {/* Mobile Menu */}
 
-      {open && (
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-500 ${
+          open ? "max-h-[700px] mt-4" : "max-h-0"
+        }`}
+      >
+        <div className="rounded-3xl bg-black/90 backdrop-blur-2xl border border-white/10 p-8">
 
-        <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+          <div className="flex flex-col gap-6">
 
-          <div className="flex flex-col p-8 gap-6">
+            {links.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="text-xl font-semibold hover:text-red-500 transition"
+              >
+                {item.name}
+              </a>
+            ))}
 
-            <a href="#about" onClick={() => setOpen(false)}>
-              Über Uns
-            </a>
-
-            <a href="#events" onClick={() => setOpen(false)}>
-              Events
-            </a>
-
-            <a href="#gallery" onClick={() => setOpen(false)}>
-              Galerie
-            </a>
-
-            <a href="#kontakt" onClick={() => setOpen(false)}>
-              Kontakt
-            </a>
-
-            <hr className="border-zinc-700" />
+            <hr className="border-white/10" />
 
             <a
               href="https://www.instagram.com/scooter_club_kalsdorf/"
@@ -162,13 +175,16 @@ export default function Navbar() {
               Facebook
             </a>
 
-            <a href="tel:+436641259454">
-              +43 664 1259454
+            <a
+              href="https://wa.me/436641259454"
+              target="_blank"
+            >
+              WhatsApp
             </a>
 
             <a
               href="#mitglied"
-              className="bg-red-600 rounded-xl text-center py-3 font-bold"
+              className="mt-2 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 py-4 text-center font-bold"
             >
               Become a Member
             </a>
@@ -176,8 +192,7 @@ export default function Navbar() {
           </div>
 
         </div>
-
-      )}
+      </div>
 
     </header>
   );
