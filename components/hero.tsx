@@ -82,19 +82,28 @@ return (
 
       {/* Text */}
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="mt-6 md:mt-8 max-w-3xl mx-auto text-base sm:text-lg md:text-2xl leading-7 md:leading-9 text-zinc-300"
-      >
-        Italienischer Lifestyle.
-        <br />
-        Leidenschaft für Vespa.
-        <br />
-        Gemeinsam Kilometer sammeln.
-      </motion.p>
+    <div className="mt-8 flex flex-col lg:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
 
+  <img
+    src="/images/team.jpg"
+    alt="Scooter Club Team"
+    className="w-72 md:w-96 rounded-3xl border border-white/10 shadow-2xl"
+  />
+
+  <motion.p
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.8 }}
+    className="text-base sm:text-lg md:text-2xl leading-7 md:leading-9 text-zinc-300 text-center lg:text-left"
+  >
+    Italienischer Lifestyle.
+    <br />
+    Leidenschaft für Vespa.
+    <br />
+    Gemeinsam Kilometer sammeln.
+  </motion.p>
+
+</div>
       {/* Buttons */}
 
       <motion.div
