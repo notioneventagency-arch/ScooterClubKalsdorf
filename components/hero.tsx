@@ -85,7 +85,7 @@ return (
     <div className="mt-8 flex flex-col lg:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
 
   <img
-    src="/images/team.jpg"
+    src="/logo/logo2.png"
     alt="Scooter Club Team"
     className="w-72 md:w-96 rounded-3xl border border-white/10 shadow-2xl"
   />
