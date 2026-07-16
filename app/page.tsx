@@ -17,30 +17,25 @@ export default function Home() {
 
       {/* ================= GALERIE ================= */}
 
-      <section
-        id="gallery"
-        className="max-w-7xl mx-auto py-32 px-6"
-      >
+  const galleryImages = [
+  "/images/about.jpg",
+  "/images/dub1.jpg",
+  "/images/dub2.jpg",
+  "/images/dub3.jpg",
+  "/images/dub4.jpg",
+  "/images/hero.jpg",
+];
 
-        <h2 className="section-title text-center">
-          Galerie
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-16">
-
-          {Array.from({ length: 20 }).map((_, index) => (
-            <img
-              key={index}
-              src={`/gallery/${index + 1}.jpg`}
-              alt={`Scooter Club ${index + 1}`}
-              className="rounded-3xl zoom aspect-square object-cover"
-            />
-          ))}
-
-        </div>
-
-      </section>
-
+<div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+  {galleryImages.map((img, index) => (
+    <img
+      key={index}
+      src={img}
+      alt={`Scooter Club ${index + 1}`}
+      className="rounded-3xl aspect-square object-cover"
+    />
+  ))}
+</div>
       {/* ================= KONTAKT ================= */}
 
       <section
