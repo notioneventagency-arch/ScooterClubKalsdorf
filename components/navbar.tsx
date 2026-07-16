@@ -15,7 +15,7 @@ const links = [
   { name: "Events", href: "#events" },
   { name: "Galerie", href: "#gallery" },
   { name: "Kontakt", href: "#kontakt" },
-   { name: "Impressum", href: "#impressum" },
+  { name: "Impressum", href: "#impressum" },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,6 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-4 pt-4">
-
       <div
         className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${
           scrolled
@@ -40,33 +39,34 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="flex items-center justify-between px-8 py-4">
+        <div className="flex items-center justify-between px-6 md:px-8 py-4">
 
           {/* Logo */}
-<a
-  href="#"
-  className="flex items-center gap-4 group"
->
-  <img
-    src="/logo/logo.png"
-    alt="Scooter Club Kalsdorf"
-    className="h-10 md:h-14 transition duration-500 group-hover:rotate-6 group-hover:scale-110"
-  />
 
-  <div>
-    <h1 className="font-black uppercase tracking-[0.15em] md:tracking-[0.25em] leading-none">
-      Scooter Club
-    </h1>
+          <a
+            href="#"
+            className="flex items-center gap-3 md:gap-4 group"
+          >
+            <img
+              src="/logo/logo.png"
+              alt="Scooter Club Kalsdorf"
+              className="h-10 md:h-14 transition duration-500 group-hover:rotate-6 group-hover:scale-110"
+            />
 
-    <p className="text-sm text-zinc-400 mt-1">
-      Kalsdorf
-    </p>
-  </div>
-</a>
-          {/* Desktop */}
+            <div>
+              <h1 className="font-black uppercase tracking-[0.12em] md:tracking-[0.25em] leading-none text-sm md:text-base">
+                Scooter Club
+              </h1>
 
-          <nav className="hidden lg:flex items-center gap-10">
+              <p className="text-xs md:text-sm text-zinc-400 mt-1">
+                Kalsdorf
+              </p>
+            </div>
+          </a>
 
+          {/* Desktop Navigation */}
+
+          <nav className="hidden lg:flex items-center gap-8">
             {links.map((item) => (
               <a
                 key={item.name}
@@ -76,16 +76,16 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-
           </nav>
 
-          {/* Desktop Right */}
+          {/* Desktop Social */}
 
           <div className="hidden lg:flex items-center gap-5">
 
             <a
               href="https://www.instagram.com/scooter_club_kalsdorf/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-pink-500 transition hover:scale-110"
             >
               <Instagram size={22} />
@@ -94,6 +94,7 @@ export default function Navbar() {
             <a
               href="https://www.facebook.com/p/Scooter-Club-Kalsdorf-61553201203901/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-500 transition hover:scale-110"
             >
               <Facebook size={22} />
@@ -102,16 +103,17 @@ export default function Navbar() {
             <a
               href="https://wa.me/436641259454"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-green-500 transition hover:scale-110"
             >
               <MessageCircle size={22} />
             </a>
 
             <a
-              href="#mitglied"
-              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-700 px-7 py-3 font-bold shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105 hover:shadow-red-600/50"
+              href="#kontakt"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-700 px-6 py-3 font-bold shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105 hover:shadow-red-600/50"
             >
-              Become a Member
+              Kontakt
 
               <ChevronRight
                 size={18}
@@ -121,7 +123,7 @@ export default function Navbar() {
 
           </div>
 
-          {/* Mobile */}
+          {/* Mobile Button */}
 
           <button
             onClick={() => setOpen(!open)}
@@ -160,6 +162,7 @@ export default function Navbar() {
             <a
               href="https://www.instagram.com/scooter_club_kalsdorf/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Instagram
             </a>
@@ -167,6 +170,7 @@ export default function Navbar() {
             <a
               href="https://www.facebook.com/p/Scooter-Club-Kalsdorf-61553201203901/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Facebook
             </a>
@@ -174,22 +178,14 @@ export default function Navbar() {
             <a
               href="https://wa.me/436641259454"
               target="_blank"
+              rel="noopener noreferrer"
             >
               WhatsApp
             </a>
 
             <a
-              href="#mitglied"
+              href="#kontakt"
               className="mt-2 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 py-4 text-center font-bold"
             >
-              Become a Member
+              Kontakt aufnehmen
             </a>
-
-          </div>
-
-        </div>
-      </div>
-
-    </header>
-  );
-}
