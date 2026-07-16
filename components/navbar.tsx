@@ -43,18 +43,26 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-8 py-4">
 
           {/* Logo */}
+<a
+  href="#"
+  className="flex items-center gap-4 group"
+>
+  <img
+    src="/logo/logo.png"
+    alt="Scooter Club Kalsdorf"
+    className="h-10 md:h-14 transition duration-500 group-hover:rotate-6 group-hover:scale-110"
+  />
 
-       
+  <div>
+    <h1 className="font-black uppercase tracking-[0.15em] md:tracking-[0.25em] leading-none">
+      Scooter Club
+    </h1>
 
-              <h1 className="font-black uppercase tracking-[0.25em] leading-none">
-                Scooter Club Kalsdorf
-              </h1>
-
-
-            </div>
-
-          </a>
-
+    <p className="text-sm text-zinc-400 mt-1">
+      Kalsdorf
+    </p>
+  </div>
+</a>
           {/* Desktop */}
 
           <nav className="hidden lg:flex items-center gap-10">
