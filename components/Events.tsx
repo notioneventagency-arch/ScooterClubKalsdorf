@@ -4,8 +4,8 @@ import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
 
 const events = [
   {
-    title: "Saisonstart 2026",
-    date: "12. April 2026",
+    title: "Fest der Vereine",
+    date: 25-26 Juli 2026",
     location: "Kalsdorf bei Graz",
     time: "09:00 Uhr",
   },
