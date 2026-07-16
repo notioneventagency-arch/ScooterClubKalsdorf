@@ -78,33 +78,33 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Teamfoto + Text */}
+     {/* Text */}
 
-          <div className="mt-12 flex flex-col lg:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.8 }}
+  className="mt-10"
+>
+  <p className="text-lg md:text-2xl leading-8 md:leading-10 text-zinc-300">
+    Italienischer Lifestyle.
+    <br />
+    Leidenschaft für Vespa.
+    <br />
+    Gemeinsam Kilometer sammeln.
+  </p>
+</motion.div>
 
-            <motion.img
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6 }}
-              src="/images/team.jpg"
-              alt="Scooter Club Team"
-              className="w-full max-w-xs md:max-w-md rounded-3xl border border-white/10 shadow-2xl"
-            />
+{/* Teamfoto */}
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
-              className="text-center lg:text-left"
-            >
-              <p className="text-lg md:text-2xl leading-8 md:leading-10 text-zinc-300">
-                Italienischer Lifestyle.
-                <br />
-                Leidenschaft für Vespa.
-                <br />
-                Gemeinsam Kilometer sammeln.
-              </p>
-            </motion.div>
+<motion.img
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1 }}
+  src="/images/team.jpg"
+  alt="Scooter Club Team"
+  className="mx-auto mt-10 w-full max-w-2xl rounded-3xl border border-white/10 shadow-2xl"
+/>
 
           </div>
 
