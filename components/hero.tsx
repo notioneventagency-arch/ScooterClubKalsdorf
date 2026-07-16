@@ -9,16 +9,16 @@ export default function Hero() {
 
       {/* Video Hintergrund */}
 
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/video/hero.mp4" type="video/mp4" />
-      </video>
+    <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src="/video/hero.mp4" type="video/mp4" />
+</video>
 
       {/* Overlay */}
 
