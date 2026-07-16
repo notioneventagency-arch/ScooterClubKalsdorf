@@ -44,14 +44,7 @@ export default function Navbar() {
 
           {/* Logo */}
 
-          <a
-            href="#"
-            className="flex items-center gap-4 group"
-          >
-         
-            />
-
-            <div>
+       
 
               <h1 className="font-black uppercase tracking-[0.25em] leading-none">
                 Scooter Club Kalsdorf
