@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
 return (
-<section className="relative h-screen overflow-hidden">
+<section className="relative min-h-screen overflow-hidden">
 
   {/* ================= Hintergrund Video ================= */}
 
@@ -32,7 +32,7 @@ return (
 
   {/* ================= Inhalt ================= */}
 
-  <div className="relative z-20 flex h-full items-center justify-center">
+  <div className="relative z-20 flex min-h-screen items-center justify-center py-24">
 
     <div className="text-center px-4 sm:px-6">
 
