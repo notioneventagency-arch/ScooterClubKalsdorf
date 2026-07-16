@@ -32,6 +32,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-4 pt-4">
+
       <div
         className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${
           scrolled
@@ -67,6 +68,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
 
           <nav className="hidden lg:flex items-center gap-8">
+
             {links.map((item) => (
               <a
                 key={item.name}
@@ -76,6 +78,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
+
           </nav>
 
           {/* Desktop Social */}
@@ -189,3 +192,12 @@ export default function Navbar() {
             >
               Kontakt aufnehmen
             </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+  );
+}
