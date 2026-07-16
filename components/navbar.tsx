@@ -15,6 +15,7 @@ const links = [
   { name: "Events", href: "#events" },
   { name: "Galerie", href: "#gallery" },
   { name: "Kontakt", href: "#kontakt" },
+   { name: "Impressum", href: "#impressum" },
 ];
 
 export default function Navbar() {
