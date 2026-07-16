@@ -57,12 +57,9 @@ export default function Navbar() {
             <div>
 
               <h1 className="font-black uppercase tracking-[0.25em] leading-none">
-                Scooter Club
+                Scooter Club Kalsdorf
               </h1>
 
-              <p className="text-sm text-zinc-400 mt-1">
-                Kalsdorf
-              </p>
 
             </div>
 
