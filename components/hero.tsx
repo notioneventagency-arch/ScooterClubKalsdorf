@@ -91,7 +91,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .8 }}
-            src="/images/team.jpg"
+            src="/images/about.jpg"
             alt="Scooter Club Team"
             className="mx-auto mt-12 w-full max-w-3xl rounded-3xl border border-white/10 shadow-2xl"
           />
