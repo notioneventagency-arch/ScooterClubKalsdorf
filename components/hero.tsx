@@ -30,7 +30,7 @@ export default function Hero() {
 
       {/* ================= Hero Inhalt ================= */}
 
-      <div className="relative z-20 min-h-screen flex items-center justify-center py-32">
+     <div className="relative z-20 min-h-[120vh] flex items-center justify-center py-40">
 
         <div className="w-full max-w-7xl mx-auto px-6 text-center">
 
